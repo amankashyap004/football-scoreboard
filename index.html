@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football Scoreboard</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="body-container">
+        <!-- Heading-->
+        <div class="heading container">
+          <h2 class="main-heading">Football Scoreboard</h2>
+        </div>
+        <!--Timer -->
+        <section class="timer-container container">
+          <div class="timer-btn">
+            <button type="submit" class="btn" id="start-timer">Start</button>
+          </div>
+          <div class="timer-box">
+            <h4 class="sub-heading digital-font" id="timer-output">
+              <span id="min">00</span>:<span id="sec">00</span>
+            </h4>
+          </div>
+          <div class="timer-btn">
+            <button type="submit" class="btn" id="pause-timer">Pause</button>
+          </div>
+        </section>
+        <!-- Scoreboard -->
+        <section class="scoreboard container">
+          <!-- First Scoreboard -->
+          <div class="first-section .scoreboard-section">
+            <div class="scoreboard-title">
+              <h3 class="sub-heading title-box" id="home-title">HOME</h3>
+            </div>
+            <div class="scoreboard-score-box">
+              <h3 class="sub-heading" id="first-score-output">00</h3>
+            </div>
+            <div class="scoreboard-score-controller">
+              <div class="score-controller-box" id="first-plus-one">
+                <h4 class="controller-plus-one digital-font">+1</h4>
+              </div>
+              <div class="score-controller-box" id="first-plus-tow">
+                <h4 class="controller-plus-two digital-font">+2</h4>
+              </div>
+              <div class="score-controller-box" id="first-plus-three">
+                <h4 class="controller-plus-tree digital-font">+3</h4>
+              </div>
+            </div>
+            <div class="fouls-contain">
+              <div class="fouls-btn">
+                <button type="submit" class="btn" id="first-fouls-btn">Fouls</button>
+              </div>
+              <div class="fouls-box">
+                <h4 class="digital-font" id="first-fouls-output">0</h4>
+              </div>
+            </div>
+          </div>
+          <!-- Second Scoreboard -->
+          <div class="second-section .scoreboard-section">
+            <div class="scoreboard-title">
+              <h3 class="sub-heading title-box" id="guest-title">GUEST</h3>
+            </div>
+            <div class="scoreboard-score-box">
+              <h3 class="sub-heading" id="second-score-output">00</h3>
+            </div>
+            <div class="scoreboard-score-controller">
+              <div class="score-controller-box" id="second-plus-one">
+                <h4 class="controller-plus-one digital-font">+1</h4>
+              </div>
+              <div class="score-controller-box" id="second-plus-tow">
+                <h4 class="controller-plus-two digital-font">+2</h4>
+              </div>
+              <div class="score-controller-box" id="second-plus-three">
+                <h4 class="controller-plus-tree digital-font">+3</h4>
+              </div>
+            </div>
+            <div class="fouls-contain">
+              <div class="fouls-btn">
+                <button type="submit" class="btn" id="second-fouls-btn">Fouls</button>
+              </div>
+              <div class="fouls-box">
+                <h4 class="digital-font" id="second-fouls-output">0</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Round and Start New Game -->
+        <section class="last-container container">
+          <div class="round-btn-container">
+            <button type="submit" class="btn" id="round-btn">Round</button>
+          </div>
+          <div class="round-box">
+            <h4 class="round-title" id="round-counter">First</h4>
+          </div>
+          <div class="new-game-btn">
+            <button type="submit" class="btn" id="new-game">New Game</button>
+          </div>
+        </section>
+        <!-- javaScript -->
+        <script src="./js/index.js"></script>
+        <script src="./js/first-scoreboard.js"></script>
+        <script src="./js/second-scoreboard.js"></script>
+        <script src="./js/timer.js"></script>
+      </div>
+    </main>
+  </body>
+</html>

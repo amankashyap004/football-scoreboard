@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Orbitron&display=swap");
+@import url("https://fonts.cdnfonts.com/css/digital-numbers");
+
+:root {
+  --shadow-color: rgb(132, 0, 255);
+  --border-color: red;
+  --border-btn: rgb(0, 13, 159);
+  --bg-btn: rgb(164, 164, 236);
+  --text-btn: rgb(0, 0, 0);
+  --text-btn-hover: rgb(255, 255, 255);
+  --border-box: rgb(104, 0, 0);
+  --bg-light: rgb(201, 228, 226);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", Verdana, sans-serif;
+  background-color: rgb(25, 25, 25);
+}
+
+.sub-heading {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  padding: 1rem 0;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  margin: 0.8rem 0;
+  background-color: var(--bg-light);
+  box-shadow: 0 0 5px 1px var(--shadow-color);
+}
+
+.btn {
+  border: 2px solid var(--border-btn);
+  background-color: var(--bg-btn);
+  color: var(--text-btn);
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin: 0 0.8rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  background-color: royalblue;
+  color: var(--text-btn-hover);
+}
+
+.btn:active {
+  transform: scale(1.18);
+}
+
+.body-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* width: 100%; */
+}
+
+.timer-box,
+.fouls-box {
+  border: 2px solid var(--border-btn);
+  /* background-color: var(--bg-btn); */
+  color: var(--text-btn);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.title-box{
+  /* border: 2px solid var(--border-btn);
+  color: var(--text-btn);
+  padding: .2rem 1rem;
+  border-radius: 10px;
+  margin: 1rem; */
+  transition: all 0.8s ease;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-heading {
+  text-align: center;
+}
+
+.timer-container,
+.last-container {
+  padding: 1rem;
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreboard-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-section {
+  margin-right: 2rem;
+}
+
+.scoreboard-title {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.scoreboard-score-box {
+  border: 2px solid black;
+  background-color: black;
+  color: red;
+  padding: 1rem;
+  margin: 0.5rem;
+  font-size: 4rem;
+  border-radius: 7px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  font-family: "Digital Numbers", sans-serif;
+}
+
+.digital-font {
+  font-family: "Digital Numbers", sans-serif;
+}
+
+.scoreboard-score-controller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-controller-box {
+  border: 2px solid var(--border-box);
+  color: var(--border-box);
+  padding: 0.6rem;
+  margin: 0.5rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.score-controller-box:active {
+  transform: scale(1.18);
+}
+
+.fouls-contain {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.round-box {
+  border: 2px solid var(--border-btn);
+  color: var(--text-btn);
+  padding: 0.6rem;
+  width: 6rem;
+  margin: 0 0.5rem;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.round-title {
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 95%;
+    margin: 0.8rem 0;
+  }
+
+  .sub-heading {
+    font-size: 1em;
+  }
+
+  .btn {
+    padding: 0.5rem;
+    font-weight: 600;
+    font-size: 1em;
+    margin: 0 0.5rem;
+  }
+ 
+  .timer-box,
+  .fouls-box {
+    padding: 0.6rem 1rem;
+    margin: 0 0.5rem;
+  }
+
+  .timer-container,
+  .last-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .scoreboard-section {
+    justify-content: space-between;
+  }
+
+  .first-section {
+    margin-right: 0.5rem;
+  }
+
+  .scoreboard-title {
+    font-size: 1.5rem;
+  }
+
+  .scoreboard-score-box {
+    padding: 0.6rem;
+    margin: 0.3rem;
+  }
+
+  .score-controller-box {
+    padding: 0.45rem;
+    margin: 0.3rem;
+  }
+
+  .round-box {
+    padding: 0.6rem;
+    width: 5rem;
+    margin: 0 0.5rem;
+  }
+}
