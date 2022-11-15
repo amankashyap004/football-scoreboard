@@ -1,7 +1,10 @@
 const startBtn = document.getElementById("start-timer");
 const stopBtn = document.getElementById("pause-timer");
 
-let minute = 02;
+const min = document.getElementById("min")
+const sec = document.getElementById("sec")
+
+let minute = 2;
 let second = 00;
 let count = 100;
 
@@ -16,23 +19,24 @@ stopBtn.addEventListener("click", function() {
 
 function resetTimer() {
   timer = false;
-  minute = 02;
+  minute = 2;
   second = 0;
   count = 100;
-  document.getElementById("min").innerHTML = "02";
-  document.getElementById("sec").innerHTML = "00";
+
+  min.textContent = "02";
+  sec.textContent = "00";
 }
 
 function stopWatch() {
   if (timer) {
     count--;
 
-    if (count == 0) {
+    if (count === 0) {
       second--;
       count = 100;
     }
 
-    if (second == 0) {
+    if (second === 0) {
       minute--;
       second = 60;
       // second = 2;
@@ -54,8 +58,8 @@ function stopWatch() {
       secString = "0" + secString;
     }
 
-    document.getElementById("min").innerHTML = minString;
-    document.getElementById("sec").innerHTML = secString;
+    min.textContent = minString;
+    sec.textContent = secString;
 
     setTimeout(stopWatch, 10);
   }

@@ -1,19 +1,16 @@
 const roundsArray = ["First", "Second", "Third", "Fourth", "Five", "Sixth", "Seventh", "Eight"];
-
 const roundCounter = document.getElementById("round-counter");
-
 const roundBtn = document.getElementById("round-btn");
-roundBtn.addEventListener("click", roundFunction);
 
 let roundCount = 0;
-function roundFunction() {
+roundBtn.addEventListener("click", function roundFunction() {
   if (roundCount >= roundsArray.length - 1) {
     roundCount = 0;
   } else {
     roundCount++;
   }
   roundCounter.textContent = roundsArray[roundCount];
-}
+})
 
 function roundClear() {
   roundCount = 0;

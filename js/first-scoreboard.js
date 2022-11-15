@@ -1,5 +1,14 @@
+const firstPlusOne = document.getElementById("first-plus-one");
+const firstPlusTow = document.getElementById("first-plus-tow");
+const firstPlusThree = document.getElementById("first-plus-three");
+const firstFouls = document.getElementById("first-fouls-btn");
+
 let firstAddScore = 0;
 let firstFoulsScore = 0;
+
+function leadingHomeFunction() {
+  return firstAddScore;
+}
 
 function firstScoreOutputClear() {
   firstAddScore = 0;
@@ -12,25 +21,26 @@ function firstFoulsScoreClear() {
   firstFoulsOutputFunction(firstFoulsScore);
 }
 
-function firstPlusOneFunction() {
+//First Add Functions
+firstPlusOne.addEventListener("click", function() {
   firstAddScore++;
   firstScoreOutputFunction(firstAddScore);
   leadingFunction();
-}
+});
 
-function firstPlusTowFunction() {
+firstPlusTow.addEventListener("click", function(){
   firstAddScore += 2;
   firstScoreOutputFunction(firstAddScore);
   leadingFunction();
-}
+});
 
-function firstPlusThreeFunction() {
+firstPlusThree.addEventListener("click", function(){
   firstAddScore += 3;
   firstScoreOutputFunction(firstAddScore);
   leadingFunction();
-}
+});
 
-function firstFoulsFunction() {
+firstFouls.addEventListener("click", function(){
   firstAddScore--;
   firstScoreOutputFunction(firstAddScore);
 
@@ -38,7 +48,7 @@ function firstFoulsFunction() {
   firstFoulsOutputFunction(firstFoulsScore);
 
   leadingFunction();
-}
+});
 
 function firstScoreOutputFunction(firstAddScore) {
   const firstScoreOutput = document.getElementById("first-score-output");
@@ -53,20 +63,4 @@ function firstScoreOutputFunction(firstAddScore) {
 function firstFoulsOutputFunction(firstFoulsScore) {
   const firstFoulsOutput = document.getElementById("first-fouls-output");
   firstFoulsOutput.innerText = firstFoulsScore;
-}
-
-const firstPlusOne = document.getElementById("first-plus-one");
-firstPlusOne.addEventListener("click", firstPlusOneFunction);
-
-const firstPlusTow = document.getElementById("first-plus-tow");
-firstPlusTow.addEventListener("click", firstPlusTowFunction);
-
-const firstPlusThree = document.getElementById("first-plus-three");
-firstPlusThree.addEventListener("click", firstPlusThreeFunction);
-
-const firstFouls = document.getElementById("first-fouls-btn");
-firstFouls.addEventListener("click", firstFoulsFunction);
-
-function leadingHomeFunction() {
-  return firstAddScore;
 }
