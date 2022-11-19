@@ -42,14 +42,14 @@ function leadingFunction() {
   let guestValue = leadingGuestFunction();
 
   if (homeValue < guestValue) {
-    leadingHome = "red";
-    leadingGuest = "green";
+    leadingHome = "#FF1E1E";
+    leadingGuest = "#0D4C92";
   } else if ((homeValue > guestValue)){
-    leadingHome = "green";
-    leadingGuest = "red";
+    leadingHome = "#0D4C92";
+    leadingGuest = "#FF1E1E";
   } else{
-    leadingHome = "black";
-    leadingGuest = "black";
+    leadingHome = "#00005C";
+    leadingGuest = "#00005C";
   }
 
   homeTitle.style.color = leadingHome;
